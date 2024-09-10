@@ -232,7 +232,6 @@ button {
 .team {
   background-color: var(--light);
 }
-
 .team-member {
   text-align: center;
   background-color: var(--white-bg);
@@ -280,7 +279,7 @@ button {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--dark);
+  color: var (--dark);
   margin-top: 16px;
 }
 .portfolio-type {
@@ -300,6 +299,9 @@ button {
 }
 .footer-text {
   width: 264px;
+  color: var(--light);
+}
+.logo-light {
   color: var(--light);
 }
 /* #endregion footer */
