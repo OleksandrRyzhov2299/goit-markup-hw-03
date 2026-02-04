@@ -218,7 +218,6 @@ button {
 }
 .hero__btn:hover,
 .hero__btn:focus {
-  font-weight: 600;
   background-color: var(--pressed-state);
 }
 .hero__btn:active {
@@ -242,11 +241,13 @@ button {
   text-align: center;
   background-color: var(--white-bg);
   border-radius: 0 0 4px 4px;
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  box-shadow:
+    0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .team-content {
-  padding: 32px 0;
+  padding: 32px 16px;
 }
 .team__desc {
   letter-spacing: 0.02em;
