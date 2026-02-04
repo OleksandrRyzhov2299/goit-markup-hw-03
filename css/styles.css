@@ -1,290 +1,266 @@
-/* #region variables */
 :root {
-  /* colors */
-  --primary-brand: #4d5ae5;
-  --pressed-state: #404bbf;
-  --dark: #2e2f42;
-  --success: #31d0aa;
-  --text: #434455;
-  --subtle-text: #8e8f99;
-  --accent: #e7e9fc;
-  --light: #f4f4fd;
-  --modal-overlay: rgba(46, 47, 66, 0.4);
-  --hero-bg: rgba(46, 47, 66, 0.7);
-  --white-bg: #fff;
-  --modal-bg: #fcfcfc;
-
-  /* others */
-  --items: 4;
-  --indent-col: 24px;
-  --indent-row: 48px;
+  --brand-color: #4d5ae5;
+  --pressed-color: #404bbf;
+  --dark-color: #2e2f42;
+  --text-color: #434455;
+  --light-color: #f4f4fd;
+  --white-color: #ffffff;
+  --border-color: #e7e9fc;
 }
-/* #endregion variables */
 
-/* #region base */
 body {
   font-family: "Roboto", sans-serif;
-  background-color: var(--white-bg);
-  color: var(--text);
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  color: var(--text-color);
+  background-color: var(--white-color);
 }
+
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p {
   margin: 0;
 }
-a {
-  text-decoration: none;
-  color: currentColor;
-}
-ul,
-ol {
-  list-style-type: none;
+
+ul {
   margin: 0;
   padding-left: 0;
 }
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-button {
-  color: currentColor;
-  cursor: pointer;
+
+.list {
+  list-style: none;
 }
 
-/* #endregion base */
-
-/* #region common */
+.link {
+  text-decoration: none;
+}
 
 .container {
-  max-width: 1158px;
+  width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
+
 .section {
   padding: 120px 0;
 }
 
-/* Card-set */
-.card-set {
-  display: flex;
-  gap: 24px;
-}
-.card-set-item {
-  width: calc((100% - var(--indent-col) * (var(--items) - 1)) / var(--items));
-}
-.team__title,
-.portfolio__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  text-transform: capitalize;
-  color: var(--dark);
-  margin-bottom: 72px;
-}
-.team__subtitle,
-.portfolio__subtitle,
-.benefits__subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--dark);
-  margin-bottom: 8px;
-}
-.site-logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.17;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  color: var(--primary-brand);
-}
-.site-logo--dark {
-  color: var(--dark);
-}
-.site-logo--light {
-  color: var(--light);
-}
+/* ===== HEADER ===== */
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(100%);
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-/* #endregion common */
-
-/* #region header */
 .site-header {
-  border-bottom: 1px solid var(--accent);
-  background: var(--white-bg);
+  border-bottom: 1px solid var(--border-color);
 }
+
 .header-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
+
 .header-nav {
   display: flex;
   align-items: center;
 }
-.header-site-logo {
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--brand-color);
   margin-right: 76px;
 }
-.header-nav__list {
+
+.logo-dark {
+  color: var(--dark-color);
+}
+
+.header-nav-list {
   display: flex;
-  align-items: center;
   gap: 40px;
 }
-.header-nav__link {
+
+.header-nav-link {
   display: block;
   padding: 24px 0;
   font-weight: 500;
-  color: var(--dark);
+  color: var(--dark-color);
 }
-.header-nav__link:hover,
-.header-nav__link:focus {
-  color: var(--pressed-state);
+
+.header-nav-link:hover,
+.header-nav-link:focus {
+  color: var(--pressed-color);
 }
-.header-nav__link:active {
-  color: var(--pressed-state);
-  text-decoration: underline;
-}
+
 .contact-info {
+  margin-left: auto;
   font-style: normal;
 }
-.contact-info__list {
+
+.contact-info-list {
   display: flex;
-  align-items: center;
   gap: 40px;
 }
-.contact-info__link {
-  display: block;
-  padding: 24px 0;
-  color: var(--text);
-}
-.contact-info__link:hover,
-.contact-info__link:focus {
-  color: var(--pressed-state);
-}
-/* #endregion header */
 
-/* #region hero */
-.hero {
-  background-color: var(--dark);
-  padding: 188px 0;
+.contact-info-link {
+  color: var(--text-color);
 }
-.hero__title {
+
+.contact-info-link:hover,
+.contact-info-link:focus {
+  color: var(--pressed-color);
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  background-color: var(--dark-color);
+  padding: 188px 0;
+  text-align: center;
+}
+
+.hero-title {
   max-width: 496px;
-  margin: 0 auto;
-  font-weight: 700;
+  margin: 0 auto 48px;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  text-align: center;
-  color: var(--white-bg);
-  margin-bottom: 48px;
+  color: var(--white-color);
 }
-.hero__btn {
-  display: block;
-  min-width: 169px;
-  height: 56px;
-  margin: 0 auto;
+
+.hero-btn {
   padding: 16px 32px;
   font-weight: 500;
   letter-spacing: 0.04em;
-  line-height: 1.5;
+  color: var(--white-color);
+  background-color: var(--brand-color);
   border: none;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  color: var(--white-bg);
-  background-color: var(--primary-brand);
+  cursor: pointer;
 }
-.hero__btn:hover,
-.hero__btn:focus {
-  background-color: var(--pressed-state);
-}
-.hero__btn:active {
-  background-color: var(--pressed-state);
-}
-/* #endregion hero */
 
-/* #region benefits */
-
-.benefits__subtitle {
-  margin-top: 0;
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--pressed-color);
 }
-/* #endregion benefits */
 
-/* #region team */
+/* ===== BENEFITS ===== */
+
+.benefits-list {
+  display: flex;
+  gap: 24px;
+}
+
+.benefits-item {
+  width: calc((100% - 72px) / 4);
+}
+
+.benefits-subtitle {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--dark-color);
+}
+
+.benefits-desc {
+  line-height: 1.5;
+}
+
+/* ===== TEAM ===== */
+
 .team {
-  background-color: var(--light);
+  background-color: var(--light-color);
 }
 
-.team__item {
+.team-title {
+  margin-bottom: 72px;
   text-align: center;
-  background-color: var(--white-bg);
-  border-radius: 0 0 4px 4px;
-  box-shadow:
-    0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16),
-    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  font-size: 36px;
+  color: var(--dark-color);
 }
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
+.team-item {
+  background-color: var(--white-color);
+  width: calc((100% - 72px) / 4);
+  border-radius: 0 0 4px 4px;
+}
+
 .team-content {
   padding: 32px 16px;
+  text-align: center;
 }
-.team__desc {
-  letter-spacing: 0.02em;
-}
-/* #endregion team */
 
-/* #region portfolio */
-.portfolio__subtitle {
-  margin-top: 0;
+.team-subtitle {
   margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--dark-color);
 }
+
+.team-desc {
+  line-height: 1.5;
+}
+
+/* ===== PORTFOLIO ===== */
+
+.portfolio-title {
+  margin-bottom: 72px;
+  text-align: center;
+  font-size: 36px;
+  color: var(--dark-color);
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+
+.portfolio-item {
+  width: calc((100% - 48px) / 3);
+}
+
 .portfolio-content {
   padding: 32px 16px;
-  border-right: 1px solid var(--accent);
-  border-bottom: 1px solid var(--accent);
-  border-left: 1px solid var(--accent);
+  border: 1px solid var(--border-color);
+  border-top: none;
 }
-.portfolio__list {
-  --items: 3;
-  display: flex;
-  row-gap: 48px;
-  column-gap: 24px;
-  flex-wrap: wrap;
-}
-/* #endregion portfolio */
 
-/* #region footer */
+.portfolio-subtitle {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--dark-color);
+}
+
+.portfolio-desc {
+  line-height: 1.5;
+}
+
+/* ===== FOOTER ===== */
+
 .site-footer {
-  background-color: var(--dark);
   padding: 100px 0;
+  background-color: var(--dark-color);
 }
-.footer-site-logo {
-  display: inline-block;
-  margin-bottom: 16px;
+
+.logo-light {
+  color: var(--light-color);
 }
-.site-footer__text {
-  width: 264px;
-  color: var(--light);
+
+.site-footer-text {
+  margin-top: 16px;
+  max-width: 264px;
+  color: var(--light-color);
 }
-/* #endregion footer */
